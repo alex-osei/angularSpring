@@ -1,12 +1,24 @@
 package learn.fullstack.springboot.topics;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * Created by alexosei on 6/3/17.
  */
+@Entity
+@Table(name = "Topic")
 public class Topic {
 
+    @Id
     private String id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "description")
     private String description;
 
     public Topic() {
